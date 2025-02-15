@@ -8,31 +8,6 @@ class HomeChatsDisplay extends StatelessWidget {
   final List<chatItem> chats = [
     chatItem(
         userImage: "assets/images/man1.jpg",
-        userName: "Danilo",
-        lastMessage: "I sent you home the last time",
-        time: 8),
-    chatItem(
-        userImage: "assets/images/man2.jpg",
-        userName: "Aloips",
-        lastMessage: "I got a new job",
-        time: 2),
-    chatItem(
-        userImage: "assets/images/man3.jpg",
-        userName: "Sami",
-        lastMessage: "I will be expecting you soon",
-        time: 18),
-    chatItem(
-        userImage: "assets/images/man4.jpg",
-        userName: "Evao",
-        lastMessage: "I have received your mesages",
-        time: 18),
-    chatItem(
-        userImage: "assets/images/man3.jpg",
-        userName: "Dolapo",
-        lastMessage: "Grace married Peter yesterday",
-        time: 27),
-    chatItem(
-        userImage: "assets/images/man1.jpg",
         userName: "Milop",
         lastMessage: "Meet me at Ibadan by 2pm",
         time: 24),
@@ -89,7 +64,7 @@ class chatItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CircleAvatar(
-                radius: 30,
+                radius: 25,
                 backgroundImage: AssetImage(userImage),
               ),
               Expanded(
@@ -100,13 +75,15 @@ class chatItem extends StatelessWidget {
                     children: [
                       Text(
                         userName,
-                        style: TextStyle(fontSize: 13),
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.bold),
                       ), //this is the username
                       Text(
                         lastMessage,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                            fontSize: 17, fontWeight: FontWeight.bold),
+                          fontSize: 17,
+                        ),
                       ) //This is insight into recent message
                     ],
                   ),
